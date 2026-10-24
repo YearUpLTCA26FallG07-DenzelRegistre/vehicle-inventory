@@ -39,8 +39,9 @@ public class Main {
                 case 1 -> processListAllVehicles(vehiclesList, numberOfVehicles);
                 case 2 -> processSearchByMakeModel(vehiclesList, numberOfVehicles);
                 case 3 -> processSearchByPrice(vehiclesList, numberOfVehicles);
-                case 4 -> processSearchByColor();
-                case 5 -> processAddVehicle();
+                case 4 -> processSearchByColor(vehiclesList, numberOfVehicles);
+                case 5 -> processAddVehicle(vehiclesList, numberOfVehicles);
+                case 6 -> System.out.println("Have a Blessed Day!");
                 default -> System.out.println("Invalid command, please try again...");
             }
 
@@ -61,6 +62,9 @@ public class Main {
     private static void displayPriceRange(Vehicle vehicle){
         System.out.println("Price: " + vehicle.getPrice());
     }
+    private static void displayVehicleColor(Vehicle vehicle){
+        System.out.println("Color: " + vehicle.getColor() );
+    }
     private static void processListAllVehicles(Vehicle[] vehiclesList, int numberOfVehicles){
         for (int i = 0; i < numberOfVehicles; i++) {
             displayVehicle( vehiclesList[i]);
@@ -72,17 +76,18 @@ public class Main {
     }
 
     private static void processSearchByPrice(Vehicle[] vehiclesList, int numberOfVehicles) {
-        for (int i = 0; i < numberOfVehicles; i++) {
-            displayPriceRange( vehiclesList[i]);
+
         }
 
     }
 
-    private static void processSearchByColor() {
-
+    private static void processSearchByColor(Vehicle[] vehiclesList, int numberOfVehicles) {
+        for (int i = 0; i < numberOfVehicles; i++) {
+            displayVehiclesColors()
+        }
     }
 
-    private static void processAddVehicle() {
+    private static void processAddVehicle(Vehicle[] vehiclesList, int numberOfVehicles) {
 
     }
 }
