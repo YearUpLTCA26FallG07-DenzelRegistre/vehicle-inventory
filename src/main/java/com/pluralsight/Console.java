@@ -19,4 +19,10 @@ public class Console {
 
 
     }
+    public static double promptForDouble(String prompt){
+        System.out.print(prompt);
+        double result = scanner.nextDouble();
+        scanner.nextLine();
+        return result;
+    }
 }
